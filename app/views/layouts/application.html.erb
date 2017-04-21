@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RupGo10</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+  </head>
+
+  <script>
+      $(document).ready(function(){
+  
+     $("#colombia").mouseenter(function(){
+      $("#mega_menu").slideToggle("fast");
+      
+    });
+  
+     $("#colombia").click(function(){
+      $("#mega_menu").slideToggle("fast");
+      
+    });
+    $(".outmega").click(function(){
+      $("#mega_menu").slideUp("fast");
+    });
+  $("#mega_menu").mouseleave(function(){
+      $("#mega_menu").slideUp("fast");
+    });
+   
+  });
+  </script>
+        <%= render "partials/navigation" %>
+  
+  
+    <% if notice %>
+      
+      <div class="notice pop"><h4><%= notice %></h4></div>
+      
+    <%end%>
+     
+         <% if alert %>
+      <div class="alert pop"><h4><%= alert %></h4></div>
+    <%end%>
+   
+   
+   
+      <%= yield %>
+</html>
