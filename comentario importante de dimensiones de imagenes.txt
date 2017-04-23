@@ -1,0 +1,1 @@
+﻿Las dimensiones de las imagenes en destinations covers deben ser de 1250 * 830 pixeles
